@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BeautyCosm - Votre Panier</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Barre de navigation (identique à l'index) -->
+    <nav class="navbar">
+        <div class="logo">
+            <a href="index.html">BeautyCosm</a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="produits.html">nos Promos</a></li>
+            <li><a href="routine.html">Marque</a></li>
+            <!-- ... autres liens ... -->
+            <li>
+                <a href="panier.html" class="cart-link">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-counter">0</span>
+                </a>
+            </li>
+            <li><a href="mon-compte.html" class="btn-login">Mon Compte</a></li>
+        </ul>
+        <div class="burger">
+            <i class="fas fa-bars"></i>
+        </div>
+    </nav>
+
+    <!-- Contenu principal du panier -->
+    <main class="cart-container">
+        <h1>Votre Panier</h1>
+        
+        <div class="cart-content">
+            <!-- Section des articles -->
+            <section class="cart-items">
+                <div class="cart-header">
+                    <h2>Produits</h2>
+                    <span>Prix</span>
+                </div>
+                
+                <div id="cart-products-list">
+                    <!-- Les produits seront ajoutés dynamiquement ici -->
+                    <div class="empty-cart-message">
+                        <i class="fas fa-shopping-cart"></i>
+                        <p>Votre panier est vide</p>
+                        <a href="produits.html" class="btn-primary">Commencer vos achats</a>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Récapitulatif de commande -->
+            <aside class="cart-summary">
+                <h2>Récapitulatif</h2>
+                
+                <div class="summary-details">
+                    <div class="subtotal">
+                        <span>Sous-total</span>
+                        <span id="cart-subtotal">0,00 dt</span>
+                    </div>
+                    <div class="shipping">
+                        <span>Livraison</span>
+                        <span id="cart-shipping">Gratuite</span>
+                    </div>
+                    <div class="total">
+                        <span>Total</span>
+                        <span id="cart-total">0,00 dt</span>
+                    </div>
+                </div>
+                
+                <button id="checkout-btn" class="btn-primary" disabled>Passer la commande</button>
+                
+                <div class="payment-methods">
+                    <p>Méthodes de paiement acceptées :</p>
+                    <div class="payment-icons">
+                        <i class="fab fa-cc-visa"></i>
+                        <i class="fab fa-cc-mastercard"></i>
+                        <i class="fab fa-cc-paypal"></i>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <!-- Footer (identique à l'index) -->
+    <footer>
+        <!-- ... -->
+    </footer>
+
+    <script src="cart.js"></script>
+</body>
+</html>

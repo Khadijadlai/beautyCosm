@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tous nos produits - BeautyCosm</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Barre de navigation -->
+    <nav class="navbar">
+        <div class="logo">
+            <a href="index.html">BeautyCosm</a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="promotions.html">Nos Promos</a></li>
+            <li><a href="marques.html">Marques</a></li>
+            <li><a href="categories.html">Catégories</a></li>
+            <li>
+                <a href="panier.html" class="cart-link">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-counter">0</span>
+                </a>
+            </li>
+            <li><a href="mon-compte.html" class="btn-login">Mon Compte</a></li>
+        </ul>
+        <div class="burger">
+            <i class="fas fa-bars"></i>
+        </div>
+    </nav>
+
+    <!-- Contenu principal -->
+    <main class="products-page">
+        <!-- Fil d'Ariane -->
+        <div class="breadcrumb">
+            <a href="index.html">Accueil</a> > 
+            <span>Tous nos produits</span>
+        </div>
+
+        <!-- En-tête de page -->
+        <div class="page-header">
+            <h1>Tous nos produits</h1>
+            <div class="sort-filter">
+                <div class="sort-by">
+                    <label for="sort">Trier par :</label>
+                    <select id="sort" name="sort">
+                        <option value="popular">Populaires</option>
+                        <option value="newest">Nouveautés</option>
+                        <option value="price-asc">Prix croissant</option>
+                        <option value="price-desc">Prix décroissant</option>
+                        <option value="rating">Meilleures notes</option>
+                    </select>
+                </div>
+                <div class="view-options">
+                    <button class="view-btn grid-view active" title="Vue grille">
+                        <i class="fas fa-th"></i>
+                    </button>
+                    <button class="view-btn list-view" title="Vue liste">
+                        <i class="fas fa-list"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Filtres de catégories -->
+        <div class="category-filters">
+            <div class="filter-section">
+                <h3>Catégories</h3>
+                <ul>
+                    <li><a href="#" class="active">Tous les produits</a></li>
+                    <li><a href="#">Soin Visage</a></li>
+                    <li><a href="#">Soin Corps</a></li>
+                    <li><a href="#">Soin Cheveux</a></li>
+                    <li><a href="#">Maquillage</a></li>
+                    <li><a href="#">Parfums</a></li>
+                    <li><a href="#">Accessoires</a></li>
+                </ul>
+            </div>
+            <div class="filter-section">
+                <h3>Marques</h3>
+                <ul>
+                    <li><a href="#">BeautyCosm</a></li>
+                    <li><a href="#">L'Oréal</a></li>
+                    <li><a href="#">Garnier</a></li>
+                    <li><a href="#">Nivea</a></li>
+                    <li><a href="#">Maybelline</a></li>
+                </ul>
+            </div>
+            <div class="filter-section">
+                <h3>Prix</h3>
+                <div class="price-range">
+                    <input type="range" min="0" max="500" value="250" class="slider" id="priceRange">
+                    <div class="price-values">
+                        <span>0 dt</span>
+                        <span>250 dt</span>
+                        <span>500 dt</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Grille de produits -->
+        <div class="products-grid">
+            <!-- Produit 1 -->
+            <div class="product-card">
+                <div class="product-badge new">Nouveau</div>
+                <div class="product-image">
+                    <img src="assets/products/creme-hydratante.jpg" alt="Crème Hydratante Intense">
+                    <div class="quick-view">
+                        <button>Voir plus</button>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <h3><a href="produit-detail.html">Crème Hydratante Intense</a></h3>
+                    <div class="product-category">Soin Visage</div>
+                    <div class="product-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                        <span>(128)</span>
+                    </div>
+                    <div class="product-price">
+                        <span class="current-price">29,99 dt</span>
+                        <span class="old-price">39,99 dt</span>
+                    </div>
+                    <div class="product-actions">
+                        <button class="btn-wishlist">
+                            <i class="far fa-heart"></i>
+                        </button>
+                        <button class="btn-add-to-cart">
+                            <i class="fas fa-shopping-cart"></i> Ajouter
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Produit 2 -->
+            <div class="product-card">
+                <div class="product-badge sale">-30%</div>
+                <div class="product-image">
+                    <img src="assets/products/serum-vitamine-c.jpg" alt="Sérum Vitaminé C">
+                    <div class="quick-view">
+                        <button>Voir plus</button>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <h3><a href="produit-detail.html">Sérum Vitaminé C Éclat</a></h3>
+                    <div class="product-category">Soin Visage</div>
+                    <div class="product-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <span>(87)</span>
+                    </div>
+                    <div class="product-price">
+                        <span class="current-price">49,99 dt</span>
+                        <span class="old-price">69,99 dt</span>
+                    </div>
+                    <div class="product-actions">
+                        <button class="btn-wishlist">
+                            <i class="far fa-heart"></i>
+                        </button>
+                        <button class="btn-add-to-cart">
+                            <i class="fas fa-shopping-cart"></i> Ajouter
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Produit 3 -->
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="assets/products/shampooing-doux.jpg" alt="Shampooing Doux">
+                    <div class="quick-view">
+                        <button>Voir plus</button>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <h3><a href="produit-detail.html">Shampooing Doux Réparateur</a></h3>
+                    <div class="product-category">Soin Cheveux</div>
+                    <div class="product-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <span>(215)</span>
+                    </div>
+                    <div class="product-price">
+                        <span class="current-price">19,99 dt</span>
+                    </div>
+                    <div class="product-actions">
+                        <button class="btn-wishlist">
+                            <i class="far fa-heart"></i>
+                        </button>
+                        <button class="btn-add-to-cart">
+                            <i class="fas fa-shopping-cart"></i> Ajouter
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Produit 4 -->
+            <div class="product-card">
+                <div class="product-badge out-of-stock">Rupture</div>
+                <div class="product-image">
+                    <img src="assets/products/parfum-fleur.jpg" alt="Parfum Fleur">
+                    <div class="quick-view">
+                        <button>Voir plus</button>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <h3><a href="produit-detail.html">Parfum Fleur de Printemps</a></h3>
+                    <div class="product-category">Parfums</div>
+                    <div class="product-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                        <span>(176)</span>
+                    </div>
+                    <div class="product-price">
+                        <span class="current-price">89,99 dt</span>
+                    </div>
+                    <div class="product-actions">
+                        <button class="btn-wishlist">
+                            <i class="far fa-heart"></i>
+                        </button>
+                        <button class="btn-notify-me">
+                            <i class="fas fa-bell"></i> Prévenir
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Produit 5 -->
+            <div class="product-card">
+                <div class="product-badge low-stock">Bientôt épuisé</div>
+                <div class="product-image">
+                    <img src="assets/products/rouge-levres.jpg" alt="Rouge à Lèvres">
+                    <div class="quick-view">
+                        <button>Voir plus</button>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <h3><a href="produit-detail.html">Rouge à Lèvres Matte</a></h3>
+                    <div class="product-category">Maquillage</div>
+                    <div class="product-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <span>(342)</span>
+                    </div>
+                    <div class="product-price">
+                        <span class="current-price">24,99 dt</span>
+                    </div>
+                    <div class="product-actions">
+                        <button class="btn-wishlist">
+                            <i class="far fa-heart"></i>
+                        </button>
+                        <button class="btn-add-to-cart">
+                            <i class="fas fa-shopping-cart"></i> Ajouter
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Produit 6 -->
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="assets/products/gel-douche.jpg" alt="Gel Douche">
+                    <div class="quick-view">
+                        <button>Voir plus</button>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <h3><a href="produit-detail.html">Gel Douche Hydratant</a></h3>
+                    <div class="product-category">Soin Corps</div>
+                    <div class="product-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                        <i class="far fa-star"></i>
+                        <span>(93)</span>
+                    </div>
+                    <div class="product-price">
+                        <span class="current-price">15,99 dt</span>
+                    </div>
+                    <div class="product-actions">
+                        <button class="btn-wishlist">
+                            <i class="far fa-heart"></i>
+                        </button>
+                        <button class="btn-add-to-cart">
+                            <i class="fas fa-shopping-cart"></i> Ajouter
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Produit 7 -->
+            <div class="product-card">
+                <div class="product-badge new">Nouveau</div>
+                <div class="product-image">
+                    <img src="assets/products/masque-visage.jpg" alt="Masque Visage">
+                    <div class="quick-view">
+                        <button>Voir plus</button>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <h3><a href="produit-detail.html">Masque Purifiant Argile</a></h3>
+                    <div class="product-category">Soin Visage</div>
+                    <div class="product-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <span>(64)</span>
+                    </div>
+                    <div class="product-price">
+                        <span class="current-price">32,99 dt</span>
+                    </div>
+                    <div class="product-actions">
+                        <button class="btn-wishlist">
+                            <i class="far fa-heart"></i>
+                        </button>
+                        <button class="btn-add-to-cart">
+                            <i class="fas fa-shopping-cart"></i> Ajouter
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Produit 8 -->
+            <div class="product-card">
+                <div class="product-badge sale">-20%</div>
+                <div class="product-image">
+                    <img src="assets/products/kit-beaute.jpg" alt="Kit Beauté">
+                    <div class="quick-view">
+                        <button>Voir plus</button>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <h3><a href="produit-detail.html">Kit Beauté Complète</a></h3>
+                    <div class="product-category">Coffrets</div>
+                    <div class="product-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                        <span>(128)</span>
+                    </div>
+                    <div class="product-price">
+                        <span class="current-price">149,99 dt</span>
+                        <span class="old-price">179,99 dt</span>
+                    </div>
+                    <div class="product-actions">
+                        <button class="btn-wishlist">
+                            <i class="far fa-heart"></i>
+                        </button>
+                        <button class="btn-add-to-cart">
+                            <i class="fas fa-shopping-cart"></i> Ajouter
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Pagination -->
+        <div class="pagination">
+            <a href="#" class="page-nav disabled">
+                <i class="fas fa-chevron-left"></i>
+            </a>
+            <a href="#" class="page-number active">1</a>
+            <a href="#" class="page-number">2</a>
+            <a href="#" class="page-number">3</a>
+            <span class="page-dots">...</span>
+            <a href="#" class="page-number">8</a>
+            <a href="#" class="page-nav">
+                <i class="fas fa-chevron-right"></i>
+            </a>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <!-- Votre footer existant -->
+    </footer>
+
+    <script src="products.js"></script>
+</body>
+</html>
+                       
